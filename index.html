@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfram's Cellular Automata</title>
+    <style>
+        #grid {
+            display: inline-block;
+            margin-top: 20px;
+            white-space: nowrap; /* Prevents wrapping to ensure grid alignment */
+            border-left: 1px solid #ddd; /* Adds left border to the grid */
+        }
+
+        .cell {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            box-sizing: border-box; /* Includes border in the width and height */
+            border-right: 1px solid #ddd; /* Vertical grid line */
+            border-bottom: 1px solid #ddd; /* Horizontal grid line */
+        }
+
+        .alive {
+            background-color: black;
+        }
+
+        .dead {
+            background-color: white;
+        }
+
+        /* Optional: Add a top border to the first row for completeness */
+        #grid > div:first-child .cell {
+            border-top: 1px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <label for="gridWidth">Grid Width (odd number):</label>
+    <input type="number" id="gridWidth" value="101">
+
+    <label for="generations">Generations:</label>
+    <input type="number" id="generations" value="50">
+
+    <label for="delay">Delay (ms):</label>
+    <input type="number" id="delay" value="100">
+
+    <button id="start">Start Automaton</button>
+</div>
+<div id="grid"></div>
+
+
+<script src="automata.js"></script>
+</body>
+</html>
