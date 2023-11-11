@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wolfram's Cellular Automata</title>
     <style>
-        #grid {
+        .grid {
             display: inline-block;
             margin-top: 20px;
             white-space: nowrap; /* Prevents wrapping to ensure grid alignment */
@@ -43,15 +43,15 @@
     <input type="number" id="gridWidth" value="101">
 
     <label for="generations">Generations:</label>
-    <input type="number" id="generations" value="50">
+    <input type="number" id="generations" value="20">
 
     <label for="delay">Delay (ms):</label>
     <input type="number" id="delay" value="100">
 
     <button id="start">Start Automaton</button>
 </div>
-<div id="grid"></div>
-
+<div id="gridRule30" class="grid"></div>
+<div id="gridHigherRuleset4" class="grid"></div>
 
 <script src="automata.js"></script>
 </body>
